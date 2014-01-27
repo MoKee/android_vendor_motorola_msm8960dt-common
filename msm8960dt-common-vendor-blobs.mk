@@ -1,4 +1,4 @@
-# Copyright (C) 2013 The CyanogenMod Project
+# Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,12 +22,14 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/msm8960dt-common/proprietary/bin/bootmodem:system/bin/bootmodem \
     vendor/motorola/msm8960dt-common/proprietary/bin/charge_only_mode:system/bin/charge_only_mode \
     vendor/motorola/msm8960dt-common/proprietary/bin/efsks:system/bin/efsks \
+    vendor/motorola/msm8960dt-common/proprietary/bin/gpsone_daemon:system/bin/gpsone_daemon \
     vendor/motorola/msm8960dt-common/proprietary/bin/hardware_revisions.sh:system/bin/hardware_revisions.sh \
     vendor/motorola/msm8960dt-common/proprietary/bin/imsdatadaemon:system/bin/imsdatadaemon \
     vendor/motorola/msm8960dt-common/proprietary/bin/imsqmidaemon:system/bin/imsqmidaemon \
     vendor/motorola/msm8960dt-common/proprietary/bin/ims_rtp_daemon:system/bin/ims_rtp_daemon \
     vendor/motorola/msm8960dt-common/proprietary/bin/irsc_util:system/bin/irsc_util \
     vendor/motorola/msm8960dt-common/proprietary/bin/ks:system/bin/ks \
+    vendor/motorola/msm8960dt-common/proprietary/bin/location-mq:system/bin/location-mq \
     vendor/motorola/msm8960dt-common/proprietary/bin/moto_com.sh:system/bin/moto_com.sh \
     vendor/motorola/msm8960dt-common/proprietary/bin/mount_ext4.sh:system/bin/mount_ext4.sh \
     vendor/motorola/msm8960dt-common/proprietary/bin/mpdecision:system/bin/mpdecision \
@@ -43,6 +45,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/msm8960dt-common/proprietary/bin/rmt_storage:system/bin/rmt_storage \
     vendor/motorola/msm8960dt-common/proprietary/bin/sensors.qcom:system/bin/sensors.qcom \
     vendor/motorola/msm8960dt-common/proprietary/bin/thermald:system/bin/thermald \
+    vendor/motorola/msm8960dt-common/proprietary/bin/xtwifi-client:system/bin/xtwifi-client \
+    vendor/motorola/msm8960dt-common/proprietary/bin/xtwifi-inet-agent:system/bin/xtwifi-inet-agent \
     vendor/motorola/msm8960dt-common/proprietary/lib/hw/camera.msm8960.so:system/lib/hw/camera.msm8960.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/hw/nfc.MSM8960.so:system/lib/hw/nfc.MSM8960.so \
@@ -76,6 +80,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/msm8960dt-common/proprietary/lib/libloc_core.so:system/lib/libloc_core.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/libloc_ds_api.so:system/lib/libloc_ds_api.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/libloc_eng.so:system/lib/libloc_eng.so \
+    vendor/motorola/msm8960dt-common/proprietary/lib/libloc_xtra.so:system/lib/libloc_xtra.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/libmdmcutback.so:system/lib/libmdmcutback.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/libmercury.so:system/lib/libmercury.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/libmm-abl.so:system/lib/libmm-abl.so \
@@ -92,7 +97,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/msm8960dt-common/proprietary/lib/libmotext_inf.so:system/lib/libmotext_inf.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/libmot_sensorlistener.so:system/lib/libmot_sensorlistener.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/libnetmgr.so:system/lib/libnetmgr.so \
-    vendor/motorola/msm8960dt-common/proprietary/lib/liboemcrypto.so:system/lib/liboemcrypto.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/libOmxMux.so:system/lib/libOmxMux.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/libOmxVenc.so:system/lib/libOmxVenc.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/libpn544_fw.so:system/lib/libpn544_fw.so \
@@ -108,6 +112,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/msm8960dt-common/proprietary/lib/libril-qc-qmi-1.so:system/lib/libril-qc-qmi-1.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \
     vendor/motorola/msm8960dt-common/proprietary/lib/libsensorhubservice_jni.so:system/lib/libsensorhubservice_jni.so \
+    vendor/motorola/msm8960dt-common/proprietary/vendor/lib/libalarmservice_jni.so:system/vendor/lib/libalarmservice_jni.so \
     vendor/motorola/msm8960dt-common/proprietary/vendor/lib/libdiag.so:system/vendor/lib/libdiag.so \
     vendor/motorola/msm8960dt-common/proprietary/vendor/lib/lib-dplmedia.so:system/vendor/lib/lib-dplmedia.so \
     vendor/motorola/msm8960dt-common/proprietary/vendor/lib/libgeofence.so:system/vendor/lib/libgeofence.so \
@@ -119,6 +124,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/msm8960dt-common/proprietary/vendor/lib/lib-imsvt.so:system/vendor/lib/lib-imsvt.so \
     vendor/motorola/msm8960dt-common/proprietary/vendor/lib/lib-imsxml.so:system/vendor/lib/lib-imsxml.so \
     vendor/motorola/msm8960dt-common/proprietary/vendor/lib/libizat_core.so:system/vendor/lib/libizat_core.so \
+    vendor/motorola/msm8960dt-common/proprietary/vendor/lib/liblocationservice.so:system/vendor/lib/liblocationservice.so \
+    vendor/motorola/msm8960dt-common/proprietary/vendor/lib/libloc_ext.so:system/vendor/lib/libloc_ext.so \
     vendor/motorola/msm8960dt-common/proprietary/vendor/lib/lib-rcsimssjni.so:system/vendor/lib/lib-rcsimssjni.so \
     vendor/motorola/msm8960dt-common/proprietary/vendor/lib/lib-rtpcommon.so:system/vendor/lib/lib-rtpcommon.so \
     vendor/motorola/msm8960dt-common/proprietary/vendor/lib/lib-rtpcore.so:system/vendor/lib/lib-rtpcore.so \
@@ -128,6 +135,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/msm8960dt-common/proprietary/vendor/lib/libqmi_common_so.so:system/vendor/lib/libqmi_common_so.so \
     vendor/motorola/msm8960dt-common/proprietary/vendor/lib/libqmi_csi.so:system/vendor/lib/libqmi_csi.so \
     vendor/motorola/msm8960dt-common/proprietary/vendor/lib/libqmi_encdec.so:system/vendor/lib/libqmi_encdec.so \
+    vendor/motorola/msm8960dt-common/proprietary/vendor/lib/libquipc_os_api.so:system/vendor/lib/libquipc_os_api.so \
+    vendor/motorola/msm8960dt-common/proprietary/vendor/lib/libulp2.so:system/vendor/lib/libulp2.so \
     vendor/motorola/msm8960dt-common/proprietary/bin/mm-pp-daemon:system/bin/mm-pp-daemon \
     vendor/motorola/msm8960dt-common/proprietary/bin/mm-qcamera-app:system/bin/mm-qcamera-app \
     vendor/motorola/msm8960dt-common/proprietary/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
@@ -252,6 +261,9 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/msm8960dt-common/proprietary/etc/firmware/tfa9890_ringtone_table.preset:system/etc/firmware/tfa9890_ringtone_table.preset \
     vendor/motorola/msm8960dt-common/proprietary/etc/firmware/tfa9890_voice_table.preset:system/etc/firmware/tfa9890_voice_table.preset \
     vendor/motorola/msm8960dt-common/proprietary/etc/firmware/VRGain.bin:system/etc/firmware/VRGain.bin \
+    vendor/motorola/msm8960dt-common/proprietary/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
+    vendor/motorola/msm8960dt-common/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
+    vendor/motorola/msm8960dt-common/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
     vendor/motorola/msm8960dt-common/proprietary/etc/DxHDCP.cfg:system/etc/DxHDCP.cfg \
     vendor/motorola/msm8960dt-common/proprietary/etc/hdcp_8960.dat.enc:system/etc/hdcp_8960.dat.enc \
     vendor/motorola/msm8960dt-common/proprietary/etc/sap.conf:system/etc/sap.conf \
